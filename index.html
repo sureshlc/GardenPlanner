@@ -7,39 +7,55 @@
     <style>
         /* Existing CSS */
         .background-image-container {
-            position: fixed; /* Use fixed to ensure the image covers the whole page even when scrolling */
+            position: fixed; 
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            z-index: -1; /* Keep the image behind other content */
+            z-index: -1;
         }
         .background-image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cover the entire area without stretching the image */
+            object-fit: cover;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            color: white;
         }
         body {
             font-family: Arial, sans-serif;
             padding: 20px;
             margin: 0;
-            background: transparent; /* No longer needed since the image is set via the img tag */
+            background: transparent;
         }
-        .content {
-            position: relative; /* Ensure content is positioned above the background image */
-            z-index: 2; /* Higher index than the background */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
         }
-        .header, .form-group, label, input, select, button {
-            /* Your existing styles */
+        .header img {
+            display: block; /* Makes the image block-level so it can be centered */
+            margin: 0 auto; /* Centers the image */
+            height: 100px; /* You can adjust this as needed */
+        }
+        .header h1 {
+            margin: 0; /* Removes default margin from h1 */
+            /* Any additional styling for the company name */
+        }
+        .form-group, label, input, select, button {
             margin-bottom: 15px;
         }
         .submit-btn {
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
             color: white;
             cursor: pointer;
         }
         .submit-btn:hover {
             background-color: #45a049;
+        }
+        input, select, button {
+            color: black;
         }
     </style>
 </head>
