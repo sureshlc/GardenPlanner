@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name | Garden Selection</title>
+    <style>
+        /* Add your CSS styling here */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .submit-btn {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="Serene.png" alt="Your Company Logo" height="100"> <!-- Update your logo path -->
+        <h1>Serene LLC</h1> <!-- Update your company name -->
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="garden-options">Choose garden options:</label>
+            <select id="garden-options" multiple>
+                <option value="grass">Grass</option>
+                <option value="roses">Roses</option>
+                <option value="tulips">Tulips</option>
+                <option value="flowering">Flowering plants</option>
+                <option value="bonsai">Bonsai</option>
+                <option value="tree">Tree</option>
+                <option value="bushes">Bushes</option>
+                <option value="barbeque">Barbeque</option>
+                <option value="playarea">Play area</option>
+                <option value="deck">Deck</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="file-upload">Upload a file:</label>
+            <input type="file" id="file-upload">
+        </div>
+
+        <div class="form-group">
+            <label for="garden-length">Garden length (in metres):</label>
+            <input type="number" id="garden-length" name="length">
+        </div>
+
+        <div class="form-group">
+            <label for="garden-width">Garden width (in metres):</label>
+            <input type="number" id="garden-width" name="width">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+</body>
+</html>
