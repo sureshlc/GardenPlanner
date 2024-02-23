@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Company Name | Garden Selection</title>
     <style>
-        /* Add your CSS styling here */
-        <style>
-    /* Existing CSS */
-    body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        margin: 0;
-        background-image: url('https://github.com/sureshlc/GardenPlanner/blob/main/your-background-image-url.png'); /* Add your background image URL here */
-        background-size: cover; /* Cover the entire page */
-        background-position: center; /* Center the background image */
-    }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        input, select, button {
+        /* Existing CSS */
+        .background-image-container {
+            position: fixed; /* Use fixed to ensure the image covers the whole page even when scrolling */
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Keep the image behind other content */
+        }
+        .background-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire area without stretching the image */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            background: transparent; /* No longer needed since the image is set via the img tag */
+        }
+        .content {
+            position: relative; /* Ensure content is positioned above the background image */
+            z-index: 2; /* Higher index than the background */
+        }
+        .header, .form-group, label, input, select, button {
+            /* Your existing styles */
+            margin-bottom: 15px;
         }
         .submit-btn {
             background-color: #4CAF50; /* Green */
@@ -44,10 +45,15 @@
 </head>
 <body>
 
-    <div class="header">
-        <img src="Serene.png" alt="Your Company Logo" height="100"> <!-- Update your logo path -->
-        <h1>Serene LLC</h1> <!-- Update your company name -->
+    <div class="background-image-container">
+        <img src="your-background-image-url.png" alt="Garden Background"> <!-- Update this with your image URL -->
     </div>
+
+    <div class="content">
+        <div class="header">
+            <img src="Serene.png" alt="Your Company Logo" height="100"> <!-- Update your logo path -->
+            <h1>Your Company Name</h1> <!-- Update your company name -->
+        </div>
 
     <form>
         <div class="form-group">
